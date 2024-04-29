@@ -68,3 +68,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+//Get.toNamed
+//
+// You can navigate from one page to another, and you can also go back by clicking the back button.
+//
+// Get.offNamed
+//
+// You can navigate from one page to another, but when you click on the back icon, it will back you 2 steps.
+//
+// Get.offAllNamed
+//
+// You can navigate from one page to another, but when you click on the back icon, you can't go back.
