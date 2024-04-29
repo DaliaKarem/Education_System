@@ -43,7 +43,9 @@ class StartPage extends StatelessWidget {
                   startPageControllerImp.GotoSignUp();
                 },),
                 SizedBox(width: 50,),
-                CustomButtons(hori: 50,text: 'Login', color: appColor.primaryColor,textColor: Colors.white,onpressed: (){},)
+                CustomButtons(hori: 50,text: 'Login', color: appColor.primaryColor,textColor: Colors.white,onpressed: (){
+                  startPageControllerImp.GotoLogin();
+                },)
 
               ],
             ))

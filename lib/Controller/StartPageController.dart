@@ -8,7 +8,7 @@ abstract class StartPageController extends GetxController{
 class StartPageControllerImp extends StartPageController{
   @override
   GotoLogin() {
-
+    Get.toNamed(RoutesApp.Login);
   }
 
   @override

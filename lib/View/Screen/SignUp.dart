@@ -2,12 +2,15 @@ import 'package:education_system/Core/Const/appColors.dart';
 import 'package:education_system/View/Widget/Auth/cusomTextField.dart';
 import 'package:education_system/View/Widget/SharedWidgets/CustomButtons.dart';
 import 'package:flutter/material.dart';
+import 'package:education_system/Controller/Auth/SignUpController.dart';
+import 'package:get/get.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    SignUpControllerImp signUpControllerImp=Get.put(SignUpControllerImp());
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -99,8 +102,9 @@ class SignUp extends StatelessWidget {
               Row(
                 children: [
                   Text("Already have an Account ?"),
-                  TextButton(onPressed: () {  },child: Text("Login",style: TextStyle(color: appColor.primaryColor),),)
-
+                  TextButton(onPressed: () {
+                    signUpControllerImp.GotoLogin();
+                  },child: Text("Login",style: TextStyle(color: appColor.primaryColor),),)
                 ],
               )
                 ]),
