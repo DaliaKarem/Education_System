@@ -19,7 +19,7 @@ class LoginControllerImp extends LoginController{
 
   @override
   GotoHome() {
-   Get.offAllNamed(RoutesApp.HomePage);
+   Get.offAllNamed(RoutesApp.StudentHomePage);
   }
 
 }

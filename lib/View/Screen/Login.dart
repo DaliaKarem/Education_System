@@ -1,5 +1,7 @@
+import 'package:dropdown_textfield/dropdown_textfield.dart';
 import 'package:education_system/Controller/Auth/LoginController.dart';
 import 'package:education_system/Core/Const/appColors.dart';
+import 'package:education_system/View/Widget/Auth/CustomDropDownTextField.dart';
 import 'package:education_system/View/Widget/Auth/cusomTextField.dart';
 import 'package:education_system/View/Widget/SharedWidgets/CustomButtons.dart';
 import 'package:flutter/material.dart';
@@ -32,10 +34,30 @@ class Login extends StatelessWidget {
                 height: 20,
               ),
               Center(
-                child: Text("Enter your Credential to ogin",
+                child: Text("Enter your Credential to login",
                     style: TextStyle(
                       fontSize: 15,
                     )),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              CustomDropDownTextField(
+                hint: 'Select Role',
+                dropDownList: [
+                  DropDownValueModel(name: 'Teacher', value: "Teacher"),
+                  DropDownValueModel(name: 'Student', value: "Student"),
+                ],
+                enableSearch: false,
+                dropDownItemCount: 8,
+                onChanged: (val) {},
+                validator: (value) {
+                  if (value == null) {
+                    return "Required field";
+                  } else {
+                    return null;
+                  }
+                },
               ),
               SizedBox(
                 height: 30,
