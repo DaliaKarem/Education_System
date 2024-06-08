@@ -3,7 +3,9 @@ class RoutesApp{
   static const String Login="/Login";
 
   static const String StudentHomePage="/StudentHomePage";
-  //static const String CourseLevel="/CourseLevel";
+  static const String TeacherHomePage="/TeacherHomePage";
+
+//static const String CourseLevel="/CourseLevel";
 
 
 }

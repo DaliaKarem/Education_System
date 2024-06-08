@@ -38,6 +38,9 @@ dependencies:
   get: ^4.6.6
   dropdown_textfield: ^1.0.8
   carousel_slider: ^4.2.1
+  shared_preferences: ^2.2.3
+  http: ^1.1.0
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:

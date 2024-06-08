@@ -1,0 +1,15 @@
+import 'dart:io';
+
+checkInterne()async{
+  try{
+    var res=await InternetAddress.lookup("google.com");
+    if(res.isNotEmpty && res[0].rawAddress.isNotEmpty)
+    {
+      return true;
+    }
+
+  }
+  on SocketException catch(e){
+    return false;
+  }
+}
