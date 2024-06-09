@@ -72,7 +72,7 @@ class LoginControllerImp extends LoginController {
             myServices.sharedPreferences.setString("email", res['data']['email']);
             myServices.sharedPreferences.setString("name", res['data']['name']);
             myServices.sharedPreferences.setString("onboarding", "2");
-            myServices.sharedPreferences.setString("Type", res['data']['type']);//0 Student _  1 Teaher
+            myServices.sharedPreferences.setString("type", res['data']['type']);//0 Student _  1 Teaher
             Get.offNamed(RoutesApp.Home);
            // Get.offNamed(selectedRole == 0 ? RoutesApp.StudentHomePage : RoutesApp.TeacherHomePage);
           } else {

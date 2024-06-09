@@ -21,14 +21,14 @@ class HomeScreen extends StatelessWidget {
                 SalomonBottomBarItem(
                   icon: Icon(Icons.home),
                   title: Text("Home"),
-                  selectedColor: Colors.purple,
+                  selectedColor: Colors.green,
                 ),
 
                 /// Likes
                 SalomonBottomBarItem(
                   icon: Icon(Icons.calendar_month),
                   title: Text("Calender"),
-                  selectedColor: Colors.pink,
+                  selectedColor: Colors.yellow,
                 ),
 
                 /// Search
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                 SalomonBottomBarItem(
                   icon: Icon(Icons.person),
                   title: Text("Profile"),
-                  selectedColor: Colors.teal,
+                  selectedColor: Colors.blue,
                 ),
               ],
             ),
