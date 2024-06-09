@@ -1,13 +1,14 @@
 import 'package:education_system/Core/Class/statusReq.dart';
 import 'package:education_system/Core/Const/RoutesName.dart';
 import 'package:education_system/Core/Functions/handlingData.dart';
+import 'package:education_system/Core/Services/services.dart';
 import 'package:education_system/Data/DataSrc/Remote/SignUp.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 abstract class SignUpController extends GetxController {
-  Future<void> SignUp();
-  void GotoLogin();
-  void GotoVerificationCode();
+   SignUp();
+   GotoLogin();
+   GotoVerificationCode();
 }
 
 class SignUpControllerImp extends SignUpController {
@@ -17,10 +18,10 @@ class SignUpControllerImp extends SignUpController {
   late TextEditingController password;
   late TextEditingController userName;
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
-  List getdata = [];
+  List getData = [];
   statusReq? status;
-  SignupStuentData signupStrudentdata = SignupStuentData(Get.find());
-  SignupTeacherData signupTeacherdata = SignupTeacherData(Get.find());
+  SignupStuentData signupStudentData = SignupStuentData(Get.find());
+  SignupTeacherData signupTeacherData = SignupTeacherData(Get.find());
 
   void showPass() {
     Press = !Press;
@@ -54,40 +55,32 @@ class SignUpControllerImp extends SignUpController {
   }
 
   @override
-  Future<void> SignUp() async {
+  void SignUp() async {
     var form = formstate.currentState;
     if (form!.validate()) {
       status = statusReq.loading;
       update();
+
+      var res;
       if (selectedRole == 0) {
-        var res = await signupStrudentdata.postData(userName.text, email.text, password.text);
-        status = handlingData(res);
-        print("Student=================================$res");
-        if (status == statusReq.success) {
-          if (res['status'] == 'success') {
-            Get.offNamed(RoutesApp.Login);
-          } else {
-            Get.defaultDialog(title: "Warning", middleText: "Email or Phone Exists");
-            status = statusReq.fail;
-          }
-        }
-        update();
-      } else {
-        var res = await signupTeacherdata.postData(userName.text, email.text, password.text);
-        status = handlingData(res);
-        print("Teacher=================================$res");
-        if (status == statusReq.success) {
-          if (res['status'] == 'success') {
-            Get.offNamed(RoutesApp.Login);
-          } else {
-            Get.defaultDialog(title: "Warning", middleText: "Email or Phone Exists");
-            status = statusReq.fail;
-          }
-        }
-        update();
+        res = await signupStudentData.postData(userName.text, email.text, password.text);
+      } else if (selectedRole == 1) {
+        res = await signupTeacherData.postData(userName.text, email.text, password.text);
       }
+
+      status = handlingData(res);
+      print("Selecter Role $selectedRole     $status");
+      if (status == statusReq.success) {
+        if (res['status'] == 'success') {
+          Get.offAllNamed(RoutesApp.Login);
+        } else {
+          Get.defaultDialog(title: "Warning", middleText: "Email or Phone Exists");
+          status = statusReq.fail;
+        }
+      }
+      update();
     } else {
-      print("Error in sign");
+      print("Error in sign up");
     }
   }
 }

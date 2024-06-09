@@ -1,5 +1,6 @@
 import 'package:education_system/Core/Const/RoutesName.dart';
 import 'package:education_system/View/Screen/CourseLevel.dart';
+import 'package:education_system/View/Screen/HomeScreen.dart';
 import 'package:education_system/View/Screen/Student/StudentHomePage.dart';
 import 'package:education_system/View/Screen/Login.dart';
 import 'package:education_system/View/Screen/SignUp.dart';
@@ -11,8 +12,10 @@ List<GetPage<dynamic>>?routes=[
   GetPage(name: "/", page:()=> StartPage()),
   GetPage(name: RoutesApp.SignUp, page:()=>SignUp()),
   GetPage(name: RoutesApp.Login, page:()=>Login()),
-  GetPage(name: RoutesApp.StudentHomePage, page:()=>StudentHomePage()),
-  GetPage(name: RoutesApp.TeacherHomePage, page:()=>TeacherHomePage()),
+
+  GetPage(name: RoutesApp.Home, page:()=>HomeScreen()),
+  //GetPage(name: RoutesApp.StudentHomePage, page:()=>StudentHomePage()),
+  //GetPage(name: RoutesApp.TeacherHomePage, page:()=>TeacherHomePage()),
 
   //GetPage(name: RoutesApp.CourseLevel, page:()=>CourseLevel()),
 

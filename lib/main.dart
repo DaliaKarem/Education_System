@@ -1,4 +1,5 @@
 import 'package:education_system/Binding/Binding.dart';
+import 'package:education_system/Core/Services/services.dart';
 import 'package:education_system/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -49,7 +50,9 @@ import 'package:get/get.dart';
 //
 // التأكد من قدرة التطبيق على الوصول لذوي الاحتياجات الخاصة من خلال تنفيذ ميزات الوصولية مثل قارئي الشاشة وأوامر الصوت.
 // دعم التعريب لاستيعاب المستخدمين من مناطق مختلفة من خلال توفير الدعم متعدد اللغات وتكييف المحتوى استنادًا إلى تفضيلات المستخدم
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await initialServies();
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {

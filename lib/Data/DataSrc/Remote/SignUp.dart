@@ -4,15 +4,14 @@ import 'package:education_system/Links.dart';
 class SignupTeacherData{
   crud _crud;
   SignupTeacherData(this._crud);
+  //int n=11;
   postData(String name,String email,String pass)async{
     var res=await _crud.postData(linkApp.SignUp_Teacher, {
       "email":email,
       "password":pass,
-      "name":name
+      "name":name,
+     // "Course_Id":n
     });
-    // print(res);
-    // print(res.fold((l) => l, (r) => r));
-    // print("////");
     return res.fold((l) => l, (r) => r);
   }
 }
@@ -23,11 +22,9 @@ class SignupStuentData{
     var res=await _crud.postData(linkApp.SignUp_Student, {
       "email":email,
       "password":pass,
-      "name":name
+      "name":name,
+
     });
-    // print(res);
-    // print(res.fold((l) => l, (r) => r));
-    // print("////");
     return res.fold((l) => l, (r) => r);
   }
 }

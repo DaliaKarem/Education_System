@@ -7,7 +7,6 @@ handlingData(res){
     return res;
   }
   else{
-    //map
     return statusReq.success;
   }
 }
