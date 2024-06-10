@@ -36,13 +36,13 @@ class StudentHomePage extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  Text(
-                    "My Subject",
-                    style: TextStyle(fontSize: 16),
-                  ),
-                  GridViewCourses(
-                    onTap: () {},
-                  ),
+                  // Text(
+                  //   "My Subject",
+                  //   style: TextStyle(fontSize: 16),
+                  // ),
+                  // GridViewCourses(
+                  //   onTap: () {},
+                  // ),
                   SizedBox(
                     height: 20,
                   ),

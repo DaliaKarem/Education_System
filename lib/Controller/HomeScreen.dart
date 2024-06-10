@@ -1,5 +1,7 @@
+import 'package:education_system/Core/Class/Courses.dart';
 import 'package:education_system/Core/Services/services.dart';
 import 'package:education_system/View/Screen/Shared/Calender.dart';
+import 'package:education_system/View/Screen/Student/Courses.dart';
 import 'package:education_system/View/Screen/Student/StudentHomePage.dart';
 import 'package:education_system/View/Screen/Teacher/TeacherHomePage.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,6 +19,7 @@ class HomePageControllerImp extends HomePageController{
     myServices = Get.find();
     Pages = [
       (myServices.sharedPreferences.getString("type") == "0") ? StudentHomePage() : TeacherHomePage(),
+      Courses(),
       Calender(),
       Column(
         children: [

@@ -6,4 +6,6 @@ class linkApp{
   static const String Login_Teacher="$linkServer/Teacher/Login.php";
   static const String Login_Student="$linkServer/Student/Login.php";
 
+  static const String Show_Courses="$linkServer/Courses/AllCourses.php";
+
 }

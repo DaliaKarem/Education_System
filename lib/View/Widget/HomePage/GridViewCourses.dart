@@ -1,7 +1,7 @@
 import 'package:education_system/Core/Class/Courses.dart';
 import 'package:education_system/Core/Const/appColors.dart';
 import 'package:flutter/material.dart';
-
+/*
 class GridViewCourses extends StatelessWidget {
   GridViewCourses({Key? key, required this.onTap}) : super(key: key);
   final void Function() onTap;
@@ -49,3 +49,6 @@ class GridViewCourses extends StatelessWidget {
     );
   }
 }
+
+
+ */

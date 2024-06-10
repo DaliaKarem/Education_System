@@ -24,7 +24,12 @@ class HomeScreen extends StatelessWidget {
                   selectedColor: Colors.green,
                 ),
 
-                /// Likes
+                SalomonBottomBarItem(
+                  icon: Icon(Icons.notes),
+                  title: Text("Courses"),
+                  selectedColor: Colors.blueAccent,
+                ),
+                /// Calender
                 SalomonBottomBarItem(
                   icon: Icon(Icons.calendar_month),
                   title: Text("Calender"),
