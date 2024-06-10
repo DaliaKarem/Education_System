@@ -18,6 +18,7 @@ class CoursesPageControllerImp extends CoursesPageController{
   }
  @override
   get_Courses()async {
+   update();
    status=statusReq.loading;
    var res=await get_courses.getData();
    status=handlingData(res);

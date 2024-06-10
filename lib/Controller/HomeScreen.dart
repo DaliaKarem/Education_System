@@ -1,6 +1,7 @@
 import 'package:education_system/Core/Class/Courses.dart';
 import 'package:education_system/Core/Services/services.dart';
 import 'package:education_system/View/Screen/Shared/Calender.dart';
+import 'package:education_system/View/Screen/Shared/Profile.dart';
 import 'package:education_system/View/Screen/Student/Courses.dart';
 import 'package:education_system/View/Screen/Student/StudentHomePage.dart';
 import 'package:education_system/View/Screen/Teacher/TeacherHomePage.dart';
@@ -26,11 +27,7 @@ class HomePageControllerImp extends HomePageController{
           Text("Chat")
         ],
       ),
-      Column(
-        children: [
-          Text("Profile")
-        ],
-      ),
+      Profile(),
     ];
   }
 
